@@ -84,10 +84,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
+		//probando
+		
 		//http.csrf().disable();
 		http.authorizeRequests().antMatchers("/","/inicio").permitAll()
-		.antMatchers("/pantalla1").hasRole("GOD").and().httpBasic().and().formLogin()
-		;
+		.antMatchers("/pantalla1").hasRole("GOD").and().httpBasic().and().formLogin();
 		//.anyRequest().authenticated();
 		//http.httpBasic().disable();
 
